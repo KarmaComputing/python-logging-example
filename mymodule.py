@@ -1,5 +1,7 @@
 import logging
 
+log = logging.getLogger(__name__)
+
 
 def example():
-    logging.debug("Hello")
+    log.warning("Hello from example()")

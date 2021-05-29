@@ -1,5 +1,7 @@
 import logging
 
+log = logging.getLogger(__name__)
+
 
 def sayHello():
-    logging.debug("Saying hello from sayHello!")
+    log.error("Saying hello from sayHello!")

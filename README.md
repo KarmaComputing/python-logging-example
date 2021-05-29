@@ -5,6 +5,20 @@
 - Change log level easily by changing `PYTHON_LOG_LEVEL` env
 
 
+# What is useful logging? (opinion)
+When there's a problem I want to see:
+
+- Filename => so I know where to look
+- Line number => so I know exactly where to start looking
+- Contexual error message => "Database bad credentials" is better than "There was an error"
+- The function name executing at the time 
+- Level of log (is it a critial, error or just information?)
+
+Don't confuse the above with security.
+
+Logging can reduced with (using PYTHON_LOG_LEVEL=CRITICAL for example), and all logging is
+sent to stderr which may be redirected.
+
 ## Display all logging messages
 
 ```
@@ -49,3 +63,10 @@ python3 __init__.py
 
 2021-05-28 13:20:33,671 root         CRITICAL This is a critical message
 ```
+
+
+## Links
+
+- https://docs.python.org/3/library/logging.html#logrecord-attributes
+- https://docs.python-guide.org/writing/logging/
+- https://docs.python.org/3/howto/logging.html#logging-advanced-tutorial 
