@@ -14,6 +14,18 @@ When there's a problem I want to see:
 - The function name executing at the time 
 - Level of log (is it a critial, error or just information?)
 
+## Example helpful log:
+
+```
+2021-05-29 15:51:06,186 mymodule     WARNING  Hello from example() example /home/fred/code/python/logging-example/pythonlogging/mymodule.py:7
+```
+
+From the above log we get:
+- *mymodule* - the name of the python module
+- *WARNING*  - The level of the log message
+- *example*  - The name of the name of the containing function
+- *File path and line number* - The exact file path and line number
+
 Don't confuse the above with security.
 
 Logging can reduced with (using PYTHON_LOG_LEVEL=CRITICAL for example), and all logging is
