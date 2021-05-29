@@ -1,5 +1,6 @@
 import logging
 import os
+import sys
 
 PYTHON_LOG_LEVEL = os.getenv("PYTHON_LOG_LEVEL", "DEBUG")
 
@@ -28,3 +29,14 @@ handler.setLevel(
 logger.addHandler(handler)
 
 logger.setLevel(PYTHON_LOG_LEVEL)
+
+# Log all uncuaght exceptions
+def handle_exception(exc_type, exc_value, exc_traceback):
+    if issubclass(exc_type, KeyboardInterrupt):
+        sys.__excepthook__(exc_type, exc_value, exc_traceback)
+        return
+
+    logger.critical("Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
+
+
+sys.excepthook = handle_exception

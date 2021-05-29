@@ -81,4 +81,5 @@ python3 __init__.py
 
 - https://docs.python.org/3/library/logging.html#logrecord-attributes
 - https://docs.python-guide.org/writing/logging/
-- https://docs.python.org/3/howto/logging.html#logging-advanced-tutorial 
+- https://docs.python.org/3/howto/logging.html#logging-advanced-tutorial
+- gnu_lorien - https://stackoverflow.com/a/16993115/885983
